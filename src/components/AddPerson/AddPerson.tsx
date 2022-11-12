@@ -21,7 +21,7 @@ export const AddPerson: FC = () => {
     if(event.target.name ==="name"){
         setNewPersonName(event.target.value)
     }else if(event.target.name === "number"){
-        setNewPersonNumber(Number(event.target.value)) // string --> number
+        setNewPersonNumber(Number(event.target.value)) // string --> number.
     }
    };
 

@@ -8,7 +8,6 @@ function App() {
 
         <h3>Add person : </h3>
         <AddPerson />
-
     </div>
 
 
