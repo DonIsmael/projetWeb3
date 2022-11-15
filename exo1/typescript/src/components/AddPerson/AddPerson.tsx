@@ -1,49 +1,52 @@
-import {  useState } from "react";
+import {  FC, ChangeEvent,useState } from "react";
 
-type FormElement = React.FormEvent<HTMLFormElement>;
+
 
 interface IPerson {
     id:number ; 
     name:string;
+    number:number;
 }
 
 
-export const AddPerson =() => {
+export const AddPerson: FC = () => {
 
-    const [newPerson , setNewPerson] = useState<string>('');
 
+    const [newPersonName , setNewPersonName] = useState<string>('');
+    const [newPersonNumber , setNewPersonNumber] = useState<number>(0);
     const [persons , setPersons] = useState<IPerson[]>([]);
 
-   /* const updatePerson =(event :ChangeEvent<HTMLInputElement>)=>{
-        setPersons(event.target.value);
 
+ 
+   const handleChange = (event : ChangeEvent<HTMLInputElement>):void =>{
+    if(event.target.name ==="name"){
+        setNewPersonName(event.target.value)
+    }else if(event.target.name === "number"){
+        setNewPersonNumber(Number(event.target.value)) // string --> number.
     }
-    */
+   };
 
-     const handleSubmit = (event:FormElement ) =>{
-        event.preventDefault();
-        AddPerson(newPerson);
-        console.log(persons);
-    }
-
-    const AddPerson = (name:string) =>{
-        const newPersons = [...persons , {id :persons.length+1,name}]
-        setPersons(newPersons);
-    }
+   const addPerson = ():void =>{
+    const newPerson = { id : persons.length+1 , name : newPersonName , number : newPersonNumber}
+    setPersons([...persons , newPerson]);
+    console.log(persons);
+   }
+   
 
     return(
         <div>
-        <h2> Add persons  : </h2>
-        <form onSubmit={handleSubmit}>
-            <input type={"text"} onChange={e =>
-             setNewPerson(e.target.value)} value={newPerson} placeholder={"name"} >
-            </input>
-            <button >Add person</button>
-        </form>
-        {persons.map((part) =>
+            <div>
+                <div>
+                    <input type={"text"} placeholder={"name"} name="name" onChange={handleChange}/>
+                    <input type={"text"} placeholder={"number"} name="number" onChange={handleChange}/>
+                </div>
+                <button onClick={addPerson} > add person </button>
+            </div>
+            {persons.map((part) =>
          (
-        <li>{part.name}</li>
+        <li>{part.name} , {part.number}</li>
         ))}
-    </div>
+
+        </div>
     );
 };

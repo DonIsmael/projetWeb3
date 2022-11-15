@@ -6,8 +6,8 @@ function App() {
   return (
     <div>
 
+        <h3>Add person : </h3>
         <AddPerson />
-
     </div>
 
 
