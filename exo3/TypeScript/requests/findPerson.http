@@ -1,0 +1,10 @@
+@hostname = localhost
+@port = 3001
+@personId = 6374cb670f4d49b4ded1829c
+@host = http://{{hostname}}:{{port}}
+
+###
+
+GET {{host}}/{{personId}} HTTP/1.1
+Accept: application/json
+
