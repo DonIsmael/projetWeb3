@@ -5,7 +5,7 @@ import { CounterContextType } from '../../types/counter';
 
 const BadButton = () => {
 
-  const { increaseBadScore } = useContext(countersContext) as CounterContextType;
+  const { increaseBadScore } = useContext(countersContext) as CounterContextType; 
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
     e.preventDefault();
