@@ -4,9 +4,7 @@ import countersContext from "contexts/opinionsContext"
 
 const AddOpinionForm = () => {
 
-  const {
-    addOpinion
-  } = useContext(countersContext);
+  const { addOpinion } = useContext(countersContext);
   
   // WE DO NOT USE A CONTAINER HERE
   // THIS STATE IS REALLY BELONGING TO THIS COMPONENT ONLY

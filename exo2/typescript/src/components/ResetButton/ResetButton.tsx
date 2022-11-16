@@ -1,20 +1,20 @@
 import React, { useContext } from 'react';
-import countersContext from "../../contexts/countersContext"
-import { CounterContextType } from '../../types/counter';
-
+import countersContext from "../../contexts/opinionsContext"
+import { OpinionContextType, Opinion } from "../../@types/todo";
+import opinionsContext from "../../contexts/opinionsContext";
 
 const ResetButton = () => {
 
-  const { resetAll } = useContext(countersContext) as CounterContextType;
+  const { reset } = useContext(countersContext) as OpinionContextType;
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
-    resetAll();
+    reset();
   }
 
   return (
     <button onClick={handleClick}>
-      Reset scores
+        Reset opinions
     </button>
   );
 }

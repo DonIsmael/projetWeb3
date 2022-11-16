@@ -1,12 +1,12 @@
 import React from 'react';
-import { ProviderWrapper } from '../../contexts/countersContext';
+import { ProviderWrapper as OpinionsProvider } from '../../contexts/opinionsContext';
 import App from './App';
 
 const AppContainer = () => {
   return (
-    <ProviderWrapper>
+    <OpinionsProvider>
       <App/>
-    </ProviderWrapper>
+   </OpinionsProvider>
   );
 }
 
