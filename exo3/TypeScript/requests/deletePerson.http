@@ -1,0 +1,11 @@
+@hostname = localhost
+@port = 3001
+@personId = 637501741661f12bcbc9779a
+@host = http://{{hostname}}:{{port}}
+
+###
+
+DELETE {{host}}/delete/{{personId}} HTTP/1.1
+Accept: application/json
+
+

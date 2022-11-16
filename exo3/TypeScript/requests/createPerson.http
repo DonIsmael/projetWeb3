@@ -1,0 +1,16 @@
+@hostname = localhost
+@port = 3001
+@host = http://{{hostname}}:{{port}}
+
+###
+
+POST {{host}}/createPerson HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "miaou 2.1",
+  "number":"0059900909090"
+}
+
+
