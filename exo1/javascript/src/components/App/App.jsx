@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from 'react'
 
 import AddPerson from "../AddPerson/AddPerson"
-import Person from "../Person/Person"
-import PersonsAPI from "../../services/persons"
 
 
 
