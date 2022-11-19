@@ -7,7 +7,7 @@ const {MONGODB_URI, PORT} = require('./config/config');
 mongoose
     .connect(MONGODB_URI)
     .then(() => {
-        console.log('CONNECTION SUCCESs')
+        console.log('CONNECTION SUCCESS')
     })
     .catch(() => {
         console.log("error");

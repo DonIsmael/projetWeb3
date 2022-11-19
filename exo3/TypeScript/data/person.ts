@@ -9,7 +9,6 @@ const personsEntries: Array<PersonEntry> = [
         "name": "name Person",
         "number": "06066"
     },
-    
 ];
 
 export default personsEntries;

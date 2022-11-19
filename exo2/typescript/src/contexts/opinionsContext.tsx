@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { v4 as uuid } from 'uuid';
-import { OpinionContextType, Opinion } from "../@types/todo";
+import { OpinionContextType, Opinion } from "../@types/opinion";
 
 type Props = {
     children: React.ReactNode

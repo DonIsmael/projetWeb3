@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { OpinionContextType, Opinion } from "../../@types/todo";
+import { OpinionContextType, Opinion } from "../../@types/opinion";
 import opinionsContext from "../../contexts/opinionsContext";
 
 type Props = {
@@ -10,7 +10,7 @@ const OpinionItem: React.FC<Props> = ({opinion}) => {
 
     const { voteForOpinion } = useContext(opinionsContext) as OpinionContextType;
 
-    const handleClick = () => {
+    const handleClick = (): void => {
         voteForOpinion(opinion.id)
     }
 

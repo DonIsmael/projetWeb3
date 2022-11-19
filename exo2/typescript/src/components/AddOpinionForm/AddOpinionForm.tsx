@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { OpinionContextType, Opinion } from "../../@types/todo";
+import { OpinionContextType, Opinion } from "../../@types/opinion";
 import opinionsContext from "../../contexts/opinionsContext"
 
 
@@ -19,7 +19,7 @@ const AddOpinionForm = () => {
     setLabel("");
   }
 
-  const handleLabelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleLabelChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     e.preventDefault();
     const newValue = e.target.value;
     setLabel(newValue);

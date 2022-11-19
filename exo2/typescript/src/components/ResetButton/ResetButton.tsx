@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import countersContext from "../../contexts/opinionsContext"
-import { OpinionContextType, Opinion } from "../../@types/todo";
+import { OpinionContextType, Opinion } from "../../@types/opinion";
 import opinionsContext from "../../contexts/opinionsContext";
 
 const ResetButton = () => {
 
   const { reset } = useContext(countersContext) as OpinionContextType;
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
     e.preventDefault();
     reset();
   }

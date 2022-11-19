@@ -9,7 +9,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "name": "miaou 2.1",
+  "name": "bouzebal 2.0",
   "number":"0059900909090"
 }
 
