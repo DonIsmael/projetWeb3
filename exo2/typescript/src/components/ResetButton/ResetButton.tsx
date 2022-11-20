@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import countersContext from "../../contexts/opinionsContext"
-import { OpinionContextType, Opinion } from "../../@types/opinion";
-import opinionsContext from "../../contexts/opinionsContext";
+import { OpinionContextType } from "../../@types/opinion";
 
 const ResetButton = () => {
 

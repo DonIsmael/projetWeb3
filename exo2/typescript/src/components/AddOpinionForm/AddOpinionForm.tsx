@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { OpinionContextType, Opinion } from "../../@types/opinion";
+import { OpinionContextType } from "../../@types/opinion";
 import opinionsContext from "../../contexts/opinionsContext"
 
 
