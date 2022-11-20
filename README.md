@@ -15,7 +15,7 @@ Celui-ci est composé en 3 modules :
 - exo2
 - exo3
 
-Chacun de ses projets traite de différentes fonctionnalités en TypeScript. 
+Chacun de ses modules traite de différentes fonctionnalités en TypeScript. 
 Dans chaque module, on y trouve deux répertoires : 
 1. javascript
     - On y retrouve l'exercice codé en React-JavaScript
