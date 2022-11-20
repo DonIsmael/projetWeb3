@@ -4,7 +4,8 @@
 
 Notre projet consiste à présenter un language de qui a de plus en plus la cote en ce moment : TypeScript.
 
-TypeScript est un langage open source, orienté objet, développé par Microsoft en 2012. Il permet d'avoir un code plus structuré et plus facile à maintenir. Il se repose sur le langage JavaScript en ajoutant la possibilité de typer de manière statiques les variables et les fonctions.
+TypeScript est un langage open source, orienté objet, développé par Microsoft en 2012.
+Il permet d'avoir un code plus structuré et plus facile à maintenir. Il se repose sur le langage JavaScript en ajoutant la possibilité de typer de manière statiques les variables et les fonctions.
 
 [Le projet](#) :
 
