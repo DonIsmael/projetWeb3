@@ -65,9 +65,7 @@ const deletePerson = (req: Request, res: Response, next: NextFunction) => {
 
 const updatePerson = (req: Request, res: Response, next: NextFunction) => {
   const body = req.body
-  // Check body
   
-  // Update
   const person = {
     name: body.name,
     number : body.number
