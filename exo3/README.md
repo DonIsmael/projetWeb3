@@ -31,10 +31,12 @@ Cet exercice traite une API REST, en utilisant une base de données MongoDB.
 
 npm install --save-dev ts-node-dev
 
-- Et pour finir installons Mongoose:
+- Installons Mongoose:
 
 npm install mongoose
 
+- Pour finir, afin de start l'app: 
+npm run dev
 
 
 [L'exercice](#) :
