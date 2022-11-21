@@ -1,4 +1,3 @@
-//const {PORT} = require('./utils/config')
 const {MONGODB_URI, PORT} = require('./utils/config');
 const express = require('express')
 const mongoose = require('mongoose')
@@ -7,12 +6,8 @@ const personsRouter = require('./routes/persons')
 const infoRouter = require('./routes/info')
 
 
-
-
 // Connect to database
 //mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
-
-
 mongoose.connect(MONGODB_URI);
 
 // Create and init server
@@ -26,10 +21,6 @@ app.use('/api/persons', personsRouter)
 app.use(infoRouter)
 
 app.use(middlewares.errorHandler)
-
-//const PORT = process.env.PORT
-
-
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)

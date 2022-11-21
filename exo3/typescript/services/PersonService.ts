@@ -4,7 +4,8 @@ import { PersonEntry } from '../types';
 import persons from '../models/person';
 
 
-const getEntries = (): Array<PersonEntry> => {
+const getPersons = (): Array<PersonEntry> => {
+  console.log("Persons entiers -> ", personsEntries);
   return personsEntries;
 }
 
@@ -87,6 +88,7 @@ const updatePerson = (req: Request, res: Response, next: NextFunction) => {
 }
 
 export default {
+  getPersons,
   getAllPersons,
   createPerson,
   findPersonById,

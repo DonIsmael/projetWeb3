@@ -3,6 +3,9 @@ import service from '../services/PersonService'
 
 const router = express.Router();
 
+router.get('/persons', (_req, res) => {
+    res.send(service.getPersons());
+  });
 
 router.get('/allPersons' , service.getAllPersons);
 
