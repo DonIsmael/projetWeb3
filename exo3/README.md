@@ -40,6 +40,7 @@ npm install mongoose
 npm run dev
 
 
+
 [L'exercice](#) :
 
 Le but de cet exercice sera de creer un backend qui puisse gérer des personnes afin de les ajouter, supprimer, trouver et mettre à jour dans la base de donees.
@@ -55,3 +56,8 @@ La base de donees choisi est MongoDB.
 En ce qui concerne la partie typescript, nous avons retranscrit l'exercice 3.18 du module 6 en typescript.
 
 
+[.env](#) :
+
+ Si vous voulez tester cette application dans vos machines veuillez ajouter un fichier .env avec vos identifiants pour vous connecter à votre DB, ainsi que le port.
+
+ Le fichier .env.example vous servira de modèle.
