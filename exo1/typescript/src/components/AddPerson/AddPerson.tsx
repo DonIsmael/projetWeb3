@@ -46,7 +46,6 @@ export const AddPerson: FC = () => {
  
   return (
     <div>
-      <h2>Add a new person</h2>
       <form onSubmit={handleAddPerson}>
         <div>
           name: <input value={newName} onChange={handleNameChange}  />

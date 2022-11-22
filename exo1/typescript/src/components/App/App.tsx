@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div>
 
-        <h3>Add a new person: </h3>
+        <h2>Add a new person: </h2>
         <AddPerson />
     </div>
   )
