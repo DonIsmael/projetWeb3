@@ -1,4 +1,3 @@
-import React from "react";
 import Gender from "./Gender";
 
 class Person {
@@ -26,7 +25,7 @@ class Person {
     return (
       <div>
         <p>
-          {this.name} {this.number} {this._gender}
+          {this.name} {this.number} {this.gender}
         </p>
       </div>
     );
