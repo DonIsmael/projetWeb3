@@ -56,7 +56,7 @@ export const AddPerson: FC = () => {
         </div>
       </form>
       <h2>List of persons</h2>
-      {persons.map((person) => person.render())}
+      {persons.map((person) => person.afficherPerson())}
     </div>
   );
 };

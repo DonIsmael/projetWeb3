@@ -22,7 +22,7 @@ class Person {
     return this._gender;
   }
 
-  render() {
+  afficherPerson() {
     return (
       <div>
         <p>
