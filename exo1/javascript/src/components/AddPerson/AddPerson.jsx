@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Person from "../Person/Person";
 
 const AddPerson = () => {
   const [newName, setNewName] = useState("");
@@ -54,9 +55,7 @@ const AddPerson = () => {
       <div>
         <h2>List of persons</h2>
         {persons.map((part) => (
-          <li>
-            {part.name} {part.number} {part.genre}
-          </li>
+          <Person person={part} />
         ))}
       </div>
     </form>
