@@ -53,7 +53,7 @@ const AddPerson = () => {
         <button type="submit">add</button>
       </div>
 
-      <div> <h2>Number</h2>
+      <div> <h2>List of persons</h2>
       {persons.map((part) => (
         <li>
           {part.name} {part.number} {part.genre}

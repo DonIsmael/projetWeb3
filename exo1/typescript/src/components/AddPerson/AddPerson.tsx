@@ -46,7 +46,7 @@ export const AddPerson: FC = () => {
  
   return (
     <div>
-      <h2>Add a new</h2>
+      <h2>Add a new person</h2>
       <form onSubmit={handleAddPerson}>
         <div>
           name: <input value={newName} onChange={handleNameChange}  />
@@ -66,7 +66,7 @@ export const AddPerson: FC = () => {
           <button type="submit">add</button>
         </div>
       </form>
-      <h2>Numbers</h2>
+      <h2>List of persons</h2>
       {persons.map(person => person.render())}
   
     </div>
