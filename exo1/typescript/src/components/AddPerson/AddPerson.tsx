@@ -8,6 +8,17 @@ export const AddPerson = () => {
   const [newNumber, setNewNumber] = useState<number>(0);
   const [newGender, setNewGender] = useState<Gender>(Gender.MAN);
 
+  const handleAddPerson = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const noteObject = new Person(newName, newNumber, newGender);
+    console.log(noteObject);
+    setPersons(persons.concat(noteObject));
+    setNewName("");
+    setNewNumber(0);
+    setNewGender(Gender.MAN);
+  };
+
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setNewName(event.target.value);
   };
@@ -22,17 +33,6 @@ export const AddPerson = () => {
     if (target.value === "MAN") setNewGender(Gender.MAN);
     if (target.value === "WOMAN") setNewGender(Gender.WOMAN);
     else setNewGender(Gender.NONE);
-  };
-
-  const handleAddPerson = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    const noteObject = new Person(newName, newNumber, newGender);
-    console.log(noteObject);
-    setPersons(persons.concat(noteObject));
-    setNewName("");
-    setNewNumber(0);
-    setNewGender(Gender.MAN);
   };
 
   return (
