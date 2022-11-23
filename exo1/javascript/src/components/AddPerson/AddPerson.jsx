@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Person from "../Person/Person";
 
 const AddPerson = () => {
+  const [persons, setPersons] = useState([]);
   const [newName, setNewName] = useState("");
   const [newNumber, setNewNumber] = useState(0);
   const [newGenre, setNewGenre] = useState("MAN");
-  const [persons, setPersons] = useState([]);
 
   const handleAddPerson = (event) => {
     event.preventDefault();

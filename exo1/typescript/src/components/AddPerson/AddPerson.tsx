@@ -1,8 +1,8 @@
-import React, { FC, useState } from "react";
+import React, { useState } from "react";
 import Person from "../Person/Person";
 import Gender from "../Person/Gender";
 
-export const AddPerson: FC = () => {
+export const AddPerson = () => {
   const [persons, setPersons] = useState<Person[]>([]);
   const [newName, setNewName] = useState<string>("");
   const [newNumber, setNewNumber] = useState<number>(0);
