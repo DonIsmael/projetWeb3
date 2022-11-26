@@ -1,9 +1,10 @@
 @hostname = localhost
 @port = 3001
-@personId = 6374cb670f4d49b4ded1829c
+@personId = 637372f1438b37ade96f1147
+
 @host = http://{{hostname}}:{{port}}
 
-###
+### supprimer une personne par son /:id
 
 DELETE {{host}}/delete/{{personId}} HTTP/1.1
 Accept: application/json

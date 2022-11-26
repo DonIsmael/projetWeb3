@@ -1,5 +1,6 @@
 import { PersonEntry } from "../types";
 
+// configuration des personnes par defaut
 const personsEntries: Array<PersonEntry> = [
   {
     name: "name Person 1",
