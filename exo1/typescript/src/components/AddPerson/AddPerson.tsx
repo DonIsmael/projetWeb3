@@ -1,61 +1,51 @@
-import React, { FC, useState } from 'react'
-import Person from "../Person/Person"
-import Gender from '../Person/Gender'
+import React, { useState } from "react";
+import Person from "../Person/Person";
+import Gender from "../Person/Gender";
 
-
-
-export const AddPerson: FC = () => {
-
-  const [persons, setPersons] = useState<Person[]>([])
+export const AddPerson = () => {
+  const [persons, setPersons] = useState<Person[]>([]);
   const [newName, setNewName] = useState<string>("");
   const [newNumber, setNewNumber] = useState<number>(0);
   const [newGender, setNewGender] = useState<Gender>(Gender.MAN);
 
+  const handleAddPerson = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
-  const handleNameChange = (event:React.ChangeEvent<HTMLInputElement>) => {
-    setNewName(event.target.value)
-  }
-
-  const handleNumberChange = (event:React.ChangeEvent<HTMLInputElement>) => {
-    setNewNumber(+event.target.value)
-  }
-
-  const handleGenderChange = (event:React.ChangeEvent<HTMLSelectElement>) => {
-    const target = event.target as HTMLSelectElement;
-    console.log(target.value);
-    if(target.value === "MAN")
-    setNewGender(Gender.MAN)
-    if(target.value === "WOMAN")
-    setNewGender(Gender.WOMAN)
-    else
-    setNewGender(Gender.NONE)
-    
-  }
-
-  const handleAddPerson = (event:React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-
-    const noteObject = new Person(newName,newNumber,newGender);
-        console.log(noteObject)
+    const noteObject = new Person(newName, newNumber, newGender);
+    console.log(noteObject);
     setPersons(persons.concat(noteObject));
     setNewName("");
     setNewNumber(0);
     setNewGender(Gender.MAN);
   };
 
- 
+  const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNewName(event.target.value);
+  };
+
+  const handleNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNewNumber(+event.target.value);
+  };
+
+  const handleGenderChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const target = event.target as HTMLSelectElement;
+    console.log(target.value);
+    if (target.value === "MAN") setNewGender(Gender.MAN);
+    if (target.value === "WOMAN") setNewGender(Gender.WOMAN);
+    else setNewGender(Gender.NONE);
+  };
+
   return (
     <div>
       <form onSubmit={handleAddPerson}>
         <div>
-          name: <input value={newName} onChange={handleNameChange}  />
+          name: <input value={newName} onChange={handleNameChange} />
         </div>
         <div>
           number: <input value={newNumber} onChange={handleNumberChange} />
         </div>
-
         <div>
-        <select id="gender" onChange={handleGenderChange}>
+          <select id="gender" onChange={handleGenderChange}>
             <option value={Gender.MAN}>MAN</option>
             <option value={Gender.WOMAN}>WOMAN</option>
             <option value={Gender.NONE}>NONE</option>
@@ -66,10 +56,7 @@ export const AddPerson: FC = () => {
         </div>
       </form>
       <h2>List of persons</h2>
-      {persons.map(person => person.render())}
-  
+      {persons.map((person) => person.afficherPerson())}
     </div>
-  )
-
-}
-
+  );
+};

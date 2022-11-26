@@ -1,5 +1,5 @@
 Cet exercice se base sur l'exercice du module 4 du cours de Web3.
-Nous allons comparer une version JavaScript-React avec une version TypeScript-React de l'exercie.
+Nous allons comparer une version JavaScript-React avec une version TypeScript-React de l'exercice.
 
 Il est intéressant de regarder comment on utilise des classes et des enums en TypeScript car ce sont des points essentiels en TypeScript.
 

@@ -1,3 +1,3 @@
-class NotFoundError extends Error { }
+class NotFoundError extends Error {}
 
-module.exports = exports = NotFoundError
+module.exports = exports = NotFoundError;
