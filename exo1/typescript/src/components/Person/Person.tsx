@@ -5,18 +5,22 @@ class Person {
   _number: number;
   _gender: Gender;
 
-  constructor(c: string, b: number, a: Gender) {
-    this._name = c;
+  // constructor
+  constructor(a: string, b: number, c: Gender) {
+    this._name = a;
     this._number = b;
-    this._gender = a;
+    this._gender = c;
   }
 
+  // getter
   get name() {
     return this._name;
   }
+
   get number() {
     return this._number;
   }
+
   get gender() {
     return this._gender;
   }
@@ -30,8 +34,11 @@ class Person {
       </div>
     );
   }
+
 }
+
 const test = new Person("azert", 67, Gender.WOMAN);
-console.log(test);
+console.log(test.name, test.number, test.gender);
+// sortie : azert 67 WOMAN
 
 export default Person;

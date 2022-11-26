@@ -3,6 +3,8 @@ import Person from "../Person/Person";
 import Gender from "../Person/Gender";
 
 export const AddPerson = () => {
+
+  // syntaxe : const [x, fx] = useState<typeof(x)>(val(x))
   const [persons, setPersons] = useState<Person[]>([]);
   const [newName, setNewName] = useState<string>("");
   const [newNumber, setNewNumber] = useState<number>(0);
@@ -10,9 +12,9 @@ export const AddPerson = () => {
 
   const handleAddPerson = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
     const noteObject = new Person(newName, newNumber, newGender);
     console.log(noteObject);
+
     setPersons(persons.concat(noteObject));
     setNewName("");
     setNewNumber(0);
@@ -59,4 +61,5 @@ export const AddPerson = () => {
       {persons.map((person) => person.afficherPerson())}
     </div>
   );
+  
 };
