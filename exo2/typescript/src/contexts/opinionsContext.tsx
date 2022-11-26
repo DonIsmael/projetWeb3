@@ -6,7 +6,8 @@ type Props = {
     children: React.ReactNode
 }
 
-const Context = React.createContext<OpinionContextType | null>(null);
+const Context = 
+    React.createContext<OpinionContextType | null>(null);
     
 const ProviderWrapper: React.FC<Props> = ({ children }) => {
 
