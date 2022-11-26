@@ -3,11 +3,14 @@ import personsEntries from "../data/person";
 import { PersonEntry } from "../types";
 import persons from "../models/person";
 
+
+// get all persons du data (les personnes par defaut)
 const getPersons = (): Array<PersonEntry> => {
   console.log("Persons entiers -> ", personsEntries);
   return personsEntries;
 };
 
+// get all persons de la DB mongoDB
 const getAllPersons = (req: Request, res: Response, next: NextFunction) => {
   persons
     .find({})
@@ -16,6 +19,7 @@ const getAllPersons = (req: Request, res: Response, next: NextFunction) => {
   console.log("method : GET -> get all persons");
 };
 
+// creer une personne
 const createPerson = (req: Request, res: Response, next: NextFunction) => {
   const body = req.body;
   const person = new persons(body);
@@ -29,6 +33,7 @@ const createPerson = (req: Request, res: Response, next: NextFunction) => {
   console.log("method : POST -> create person");
 };
 
+// trouver une person grace a son id
 const findPersonById = (req: Request, res: Response, next: NextFunction) => {
   persons
     .findById(req.params.id)
@@ -44,6 +49,7 @@ const findPersonById = (req: Request, res: Response, next: NextFunction) => {
   console.log("GET -> find by id");
 };
 
+// supprimer une personne de la DB
 const deletePerson = (req: Request, res: Response, next: NextFunction) => {
   persons
     .findByIdAndRemove(req.params.id)
@@ -59,6 +65,7 @@ const deletePerson = (req: Request, res: Response, next: NextFunction) => {
   console.log("method : DELETE -> delete a person");
 };
 
+// mettre a jour une personne de la DB
 const updatePerson = (req: Request, res: Response, next: NextFunction) => {
   const body = req.body;
 
@@ -80,6 +87,7 @@ const updatePerson = (req: Request, res: Response, next: NextFunction) => {
   console.log("method : UPDATE -> update a person");
 };
 
+// export de toutes les request 
 export default {
   getPersons,
   getAllPersons,

@@ -2,12 +2,11 @@
 @port = 3001
 @host = http://{{hostname}}:{{port}}
 
-###
-
+### get all persons de la base de donees mongoDB
 GET {{host}}/allPersons HTTP/1.1
 Accept: application/json
 
 
-###
+### get all persons de la data
 GET {{host}}/persons HTTP/1.1
 Accept: application/json

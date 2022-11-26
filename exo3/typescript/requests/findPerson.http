@@ -3,7 +3,7 @@
 @personId = 63790d60d88146136e7b645d
 @host = http://{{hostname}}:{{port}}
 
-###
+### mettre a jour une personne par son /:id
 
 GET {{host}}/{{personId}} HTTP/1.1
 Accept: application/json

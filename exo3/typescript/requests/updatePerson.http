@@ -4,7 +4,7 @@
 @personId = 6374cb670f4d49b4ded1829c
 
 
-###
+### mettre a jour une personne par son /:id
 
 PUT {{host}}/update/{{personId}} HTTP/1.1
 Accept: application/json
