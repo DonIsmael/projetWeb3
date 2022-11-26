@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { OpinionContextType, Opinion } from "../../@types/opinion";
 import opinionsContext from "../../contexts/opinionsContext";
 
-type Props = {
+type Props = { // on déclare chacun de nos props
   opinion: Opinion;
 };
 

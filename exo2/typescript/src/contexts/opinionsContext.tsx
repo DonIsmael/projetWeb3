@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 import { OpinionContextType, Opinion } from "../@types/opinion";
 
-type Props = {
+type Props = { // on déclare chacun de nos props
   children: React.ReactNode;
 };
 
+// on initialise le context en lui donnant son type et null 
+// pour pouvoir l'instancier en amont
 const Context = React.createContext<OpinionContextType | null>(null);
 
 const ProviderWrapper: React.FC<Props> = ({ children }) => {
